@@ -1,5 +1,10 @@
 body {
+  margin: 20px;
   width: 20rem;
-  height: 17rem;
-  background: orange;
+  height: 33rem;
+  font-family: "PT Serif", serif;
+}
+
+input {
+  border: #B19110;
 }

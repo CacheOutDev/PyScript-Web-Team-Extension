@@ -14,11 +14,31 @@
     <link rel="stylesheet" href="popup.css" />
     <link rel="stylesheet" href="runtime/pyscript.css" />
     <script defer src="runtime/pyscript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h2>Hello World!</h2>
-    <h4 id="datetime"></h4>
-<!-- Python code below is intentionally left-aligned to utilise full width  -->
+    <div class="title"><h1>Web Team Tools</h1></div>
+
+    <div class="content">
+      <h2>Mass Downloader (D10)</h2>
+      <p>Enter the D10 links you'd like to download.</p>
+      <input type="url" style="width: 18rem; height: 10rem;"/>
+
+      <h2>Web Scraper (Department)</h2>
+      <p>Enter the department site link address.</p>
+      <input type="url" style="width: 18rem; height: 1rem;"/>
+
+      <h2>Web Scraper (D10 Media Library)</h2>
+      <p>Enter the D10 Media Library link address.</p>
+      <input type="url" style="width: 18rem; height: 1rem;"/>
+    </div>
+    
+    
+    
+    <!-- <h4 id="datetime"></h4>
+ Python code below is intentionally left-aligned to utilise full width 
 <py-script>
 from js import document as popup  # DOM for this popup page
 from datetime import datetime
@@ -29,13 +49,17 @@ print("This is the current date and time in ISO8601 format, courtesy of Python a
 # Update an element in the popup directly
 insert_content = popup.getElementById('datetime')
 insert_content.innerHTML = f"<i>{datetime.now().isoformat()}</i>"
-</py-script>
-<py-repl>
-text = "This is a REPL session.<br>"
-text += "You can add several lines of Python<br>"
-text += "Then just press Shift-ENTER to run!"
-print(text.upper())
-</py-repl>
+</py-script> -->
+
+
   </body>
 </html>
 
+<!--
+<py-repl>
+  text = "This is a REPL session.<br>"
+  text += "You can add several lines of Python<br>"
+  text += "Then just press Shift-ENTER to run!"
+  print(text.upper())
+  </py-repl>
+-->
