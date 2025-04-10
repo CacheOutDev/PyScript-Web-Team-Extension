@@ -29,7 +29,6 @@
       <p>Enter the links you'd like to download.</p>
       <input type="url" style="width: 18rem; height: 10rem; margin-bottom: 8px;"/>
       <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
-      
 
       <h2>Spreadsheet Formatter</h2>
       <p>Upload the spreadsheet that you'd like to format.</p>
@@ -38,13 +37,17 @@
       <p>Formatted Spreadsheet: </p>
 
       <h2>Link Spotter</h2>
-      <p>Below are all the links on the page.</p>
+      <py-script>
+        from js import document
 
+        print("Below are all the links on the page. <br><br>")
+      </py-script>
     </div>
+  </body>
+</html>
     
-    
-    
-    <!-- <h4 id="datetime"></h4>
+<!--
+ <h4 id="datetime"></h4>
  Python code below is intentionally left-aligned to utilise full width 
 <py-script>
 from js import document as popup  # DOM for this popup page
@@ -56,11 +59,8 @@ print("This is the current date and time in ISO8601 format, courtesy of Python a
 # Update an element in the popup directly
 insert_content = popup.getElementById('datetime')
 insert_content.innerHTML = f"<i>{datetime.now().isoformat()}</i>"
-</py-script> -->
-
-
-  </body>
-</html>
+</py-script> 
+-->
 
 <!--
 <py-repl>
