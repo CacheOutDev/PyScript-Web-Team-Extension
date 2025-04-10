@@ -1,6 +1,6 @@
 {
-  "name": "PyScript Demo 1",
-  "description": "Build Chrome Extensions in Python/PyScript",
+  "name": "Web Team Tools",
+  "description": "Web team tools built with Python/PyScript",
   "version": "1.0",
   "manifest_version": 3,
   "icons": {
