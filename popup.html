@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PyScript Demo 1</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <py-config>
+    <title>Web Team Tools</title>
+    <py-config> <!-- Initailizes PyScript -->
       [[runtimes]]
       src = "runtime/pyodide.js"
       name = "pyodide-0.21.3"
@@ -14,48 +14,45 @@
     <link rel="stylesheet" href="popup.css" />
     <link rel="stylesheet" href="runtime/pyscript.css" />
     <script defer src="runtime/pyscript.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="popup.js"></script> <!-- Allows us to import JavaScript objects (e.g. variables and functions)-->
+    <py-env> <!-- Allows us to import from other .py scripts -->
+      - paths:
+        - /config.py
+    </py-env>
   </head>
+
   <body>
     <div class="title"><h1>Web Team Tools</h1></div>
 
     <div class="content">
-      <h2>D10 Mass Downloader</h2>
+      <h2>Mass Downloader</h2>
       <p>Enter the links you'd like to download.</p>
-      <input type="url" style="width: 18rem; height: 10rem; margin-bottom: 8px;"/>
-      <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
+      <input type="url" style="margin-bottom: 8px; height: 10rem;"/>
+      <button>Submit</button>
+
+      <!-- 
+      
+      -->
 
       <h2>Spreadsheet Formatter</h2>
       <p>Upload the spreadsheet that you'd like to format.</p>
-      <input type="file" style="width: 18rem; padding: 5px; margin-bottom: 8px;"/>
-      <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
-      <p style="margin-bottom:5px;"></p>Formatted Spreadsheet: </p>
+      <input type="file" style="margin-bottom: 8px; padding: 5px;"/>
+      <button>Submit</button>
+      <p>Formatted Spreadsheet: </p>
 
-      <h2>D10 / SharePoint Spotter</h2>
+      <!-- 
+      
+      -->
+
+      <h2>Link Spotter</h2>
       <p>Enter the site you'd like to check.</p>
-      <input type="url" style="width: 18rem; margin-bottom: 8px;"/>
-      <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
+      <input type="url" style="margin-bottom: 8px;"/>
+      <button>Submit</button>
+
+      <!--
+      
+      -->
+
     </div>
   </body>
 </html>
-    
-<!--
- <h4 id="datetime"></h4>
- Python code below is intentionally left-aligned to utilise full width 
-<py-script>
-from js import document as popup  # DOM for this popup page
-from datetime import datetime
-
-# Use print to update the popup
-print("This is the current date and time in ISO8601 format, courtesy of Python and PyScript.<br><br>")
-
-# Update an element in the popup directly
-insert_content = popup.getElementById('datetime')
-insert_content.innerHTML = f"<i>{datetime.now().isoformat()}</i>"
-</py-script> 
--->
