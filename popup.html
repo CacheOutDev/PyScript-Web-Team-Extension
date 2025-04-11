@@ -25,7 +25,7 @@
     <div class="title"><h1>Web Team Tools</h1></div>
 
     <div class="content">
-      <h2>Mass Downloader</h2>
+      <h2>D10 Mass Downloader</h2>
       <p>Enter the links you'd like to download.</p>
       <input type="url" style="width: 18rem; height: 10rem; margin-bottom: 8px;"/>
       <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
@@ -34,14 +34,12 @@
       <p>Upload the spreadsheet that you'd like to format.</p>
       <input type="file" style="width: 18rem; padding: 5px; margin-bottom: 8px;"/>
       <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
-      <p>Formatted Spreadsheet: </p>
+      <p style="margin-bottom:5px;"></p>Formatted Spreadsheet: </p>
 
-      <h2>Link Spotter</h2>
-      <py-script>
-        from js import document
-
-        print("Below are all the links on the page. <br><br>")
-      </py-script>
+      <h2>D10 / SharePoint Spotter</h2>
+      <p>Enter the site you'd like to check.</p>
+      <input type="url" style="width: 18rem; margin-bottom: 8px;"/>
+      <button style="padding: 3px; margin-bottom:5px; border-color: #830A1A;">Submit</button>
     </div>
   </body>
 </html>
@@ -60,13 +58,4 @@ print("This is the current date and time in ISO8601 format, courtesy of Python a
 insert_content = popup.getElementById('datetime')
 insert_content.innerHTML = f"<i>{datetime.now().isoformat()}</i>"
 </py-script> 
--->
-
-<!--
-<py-repl>
-  text = "This is a REPL session.<br>"
-  text += "You can add several lines of Python<br>"
-  text += "Then just press Shift-ENTER to run!"
-  print(text.upper())
-  </py-repl>
 -->
