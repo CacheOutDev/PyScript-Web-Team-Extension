@@ -11,8 +11,8 @@
       lang = "python"
     </py-config>
     <link rel="icon" type="icons/png" href="/icon-128.png" />
-    <link rel="stylesheet" href="popup.css" />
     <link rel="stylesheet" href="runtime/pyscript.css" />
+    <link rel="stylesheet" href="popup.css" />
     <script defer src="runtime/pyscript.js"></script>
     <script src="popup.js"></script> <!-- Allows us to import JavaScript objects (e.g. variables and functions)-->
     <py-env> <!-- Allows us to import from other .py scripts -->
@@ -22,6 +22,7 @@
   </head>
 
   <body>
+    <!--
     <div class="title"><h1>Web Team Tools</h1></div>
 
     <div class="content">
@@ -30,29 +31,44 @@
       <input type="url" style="margin-bottom: 8px; height: 10rem;"/>
       <button>Submit</button>
 
-      <!-- 
-      
-      -->
-
       <h2>Spreadsheet Formatter</h2>
       <p>Upload the spreadsheet that you'd like to format.</p>
       <input type="file" style="margin-bottom: 8px; padding: 5px;"/>
       <button>Submit</button>
       <p>Formatted Spreadsheet: </p>
 
-      <!-- 
-      
-      -->
-
       <h2>Link Spotter</h2>
       <p>Enter the site you'd like to check.</p>
       <input type="url" style="margin-bottom: 8px;"/>
       <button>Submit</button>
+    </div> -->
 
-      <!--
-      
-      -->
-
-    </div>
+    <button py-click="copy_ip()" id="IP">IP address</button>
+    <br><pre id="output"></pre></br>
   </body>
+
+<!-- Error Message: https://docs.pyscript.net/2024.7.1/faq/ -->
+
+  <py-script>
+  import json
+
+  from js import alert
+  from js import clipboardCopy
+  from js import document
+  from pyodide.http import pyfetch
+  
+  from config import IP
+  
+  document.body.style.backgroundColor = 'orange'
+  
+  async def copy_ip():
+      response = await pyfetch(IP)
+      response = await response.json()
+      response = json.dumps(response, indent=4)
+      output = Element("output")
+      output.element.innerHTML = f"<i>{response}</i>"
+      clipboardCopy(response)
+      alert("New content copied to clipboard")
+      document.getElementById("IP").disabled = True
+  </py-script>
 </html>
