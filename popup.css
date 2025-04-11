@@ -10,26 +10,28 @@ body {
   margin-top: -16px;
   padding-top: 3px;
   text-align: center;
-  font-family: "Bona Nova SC", serif;
   background: #830A1A;
   color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .content {
   margin-left: 10px;
-  font-family: "PT Serif", serif;
 }
 
 input {
   border: #B19110;
+  width: 18rem;
 }
 
 
 button {
   background-color: none;
   color: #830A1A;
-  padding: 10px;
+  padding: 3px;
   width: 4rem;
   height: 2rem;
   border-radius: 20px;
+  margin-bottom: 5px;
+  border-color: #830A1A;
 }
