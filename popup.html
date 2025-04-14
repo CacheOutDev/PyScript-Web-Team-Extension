@@ -49,26 +49,26 @@
 
 <!-- Error Message: https://docs.pyscript.net/2024.7.1/faq/ -->
 
-  <py-script>
-  import json
+<py-script>
+import json
 
-  from js import alert
-  from js import clipboardCopy
-  from js import document
-  from pyodide.http import pyfetch
-  
-  from config import IP
-  
-  document.body.style.backgroundColor = 'orange'
-  
-  async def copy_ip():
-      response = await pyfetch(IP)
-      response = await response.json()
-      response = json.dumps(response, indent=4)
-      output = Element("output")
-      output.element.innerHTML = f"<i>{response}</i>"
-      clipboardCopy(response)
-      alert("New content copied to clipboard")
-      document.getElementById("IP").disabled = True
-  </py-script>
+from js import alert
+from js import clipboardCopy
+from js import document
+from pyodide.http import pyfetch
+
+from config import IP
+
+document.body.style.backgroundColor = 'orange'
+
+async def copy_ip():
+    response = await pyfetch(IP)
+    response = await response.json()
+    response = json.dumps(response, indent=4)
+    output = Element("output")
+    output.element.innerHTML = f"<i>{response}</i>"
+    clipboardCopy(response)
+    alert("New content copied to clipboard")
+    document.getElementById("IP").disabled = True
+</py-script>
 </html>
