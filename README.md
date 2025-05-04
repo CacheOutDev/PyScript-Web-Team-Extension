@@ -6,5 +6,5 @@ So far, I've been able to structure the UI. However, I've been facing issues wit
 
 ## Tutorials Followed
 
-[Write Chrome Extensions in Python by Pete Fison](https://medium.com/pythoniq/write-chrome-extensions-in-python-6c6b0e2e1573)
+[Write Chrome Extensions in Python by Pete Fison](https://medium.com/pythoniq/write-chrome-extensions-in-python-6c6b0e2e1573)  
 [PyScript Documentation](https://docs.pyscript.net/2025.3.1/)
